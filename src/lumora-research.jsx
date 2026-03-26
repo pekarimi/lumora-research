@@ -377,6 +377,12 @@ function HomePage({ onNavigate }) {
   return (
     <>
       <div className="hero-inline">
+        <div className="mobile-headshot">
+          <div className="mobile-headshot-wrap">
+            <img src="/images/headshot.jpg" alt="Pegah Karimi" className="mobile-headshot-img" />
+          </div>
+          <div className="mobile-headshot-name">Pegah Karimi, Ph.D.</div>
+        </div>
         <h1 className="hero-tagline">{SITE_DATA.tagline}</h1>
         <p className="hero-sub">{SITE_DATA.subtagline}</p>
         <span className="hero-accent-line" aria-hidden="true" />
@@ -792,6 +798,10 @@ h1:focus{outline:none}
 
 /* HERO */
 .hero-inline{margin-bottom:56px;padding-bottom:48px;border-bottom:1px solid var(--c-border)}
+.mobile-headshot{display:none;flex-direction:column;align-items:center;margin-bottom:28px}
+.mobile-headshot-wrap{width:90px;height:90px;border-radius:50%;overflow:hidden;border:2.5px solid var(--c-accent-light);box-shadow:0 2px 12px rgba(27,67,50,.08)}
+.mobile-headshot-img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.mobile-headshot-name{font-size:15px;font-weight:500;color:var(--c-text);margin-top:10px}
 .hero-tagline{font-family:var(--font-display);font-size:clamp(34px,5vw,54px);font-weight:600;line-height:1.18;letter-spacing:-.02em;color:var(--c-text)}
 .hero-sub{font-size:18.5px;color:var(--c-text-secondary);line-height:1.7;margin-top:20px;max-width:680px}
 .hero-accent-line{display:block;width:56px;height:3px;background:linear-gradient(90deg,var(--c-accent-bright),var(--c-accent-mid),transparent);margin-top:28px;border-radius:2px}
@@ -959,6 +969,7 @@ h1:focus{outline:none}
 /* RESPONSIVE */
 @media(max-width:860px){
   .sidebar{display:none}
+  .mobile-headshot{display:flex}
   .mobile-nav{display:block}
   .back-home{display:inline-flex}
   .main-content{margin-left:0;padding:80px 24px 60px;max-width:100%}
