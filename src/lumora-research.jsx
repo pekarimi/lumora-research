@@ -7,9 +7,9 @@ const SITE_DATA = {
   intro: "I'm a Human-Computer Interaction researcher with dual PhDs and 15+ peer-reviewed publications in CHI, CSCW, and IUI. My work sits at a specific intersection: AI systems designed for populations where getting it wrong has real consequences — children learning math, patients navigating health decisions, older adults managing chronic care, students on the verge of dropping out.",
   fellowship: "Research Fellow, Childhood and AI Lab — investigating how AI math tools calibrate difficulty for K–5 learners.",
   evidencePoints: [
-    { number: "785+", label: "participants in my largest study", detail: "SEM analysis identifying Course Relevance to Career Goals as the #1 dropout predictor (β = –0.523)" },
+    { number: "785+", label: "participants in my largest study", detail: "SEM analysis identifying Course Relevance as the #1 predictor of withdrawal consideration (β = –0.620)" },
     { number: "88.6%", label: "task success rate", detail: "Blind and visually impaired users composing messages with a screenless wearable — no prior training" },
-    { number: "20+", label: "interviews with older adults & caregivers", detail: "Shaping AI voice assistant design for collaborative health management" },
+    { number: "20+", label: "interviews with older adults", detail: "Developing a framework for when AI should automate vs. when users should stay in control" },
     { number: "15", label: "AI math tools inventoried", detail: "Systematic evaluation of how K–5 tools calibrate to children's abilities" },
   ],
   approach: {
@@ -32,22 +32,22 @@ const SITE_DATA = {
       context: "NSF-funded · Indiana University · Published at CHI & CSCW",
       domain: "Healthcare AI",
       image: "/images/older-adult.jpg",
-      problem: "Older adults managing chronic conditions often forget, misunderstand, or feel overwhelmed by health information from physician visits. AI assistants could help — but existing designs assumed tech-literate, independent users.",
-      what_i_did: "Led end-to-end research on 'Scribe,' an AI tool capturing patient-physician conversations. Conducted 20+ interviews, Wizard of Oz studies, participatory design workshops, and in-situ evaluations — always with older adults and their caregivers in the room, not as afterthoughts.",
-      key_finding: "Older adults wanted AI that supported collaboration with caregivers, not autonomy from them. This directly contradicted the prevailing design assumption. The finding reshaped the entire platform architecture.",
+      problem: "Older adults managing chronic conditions face a flood of health information after doctor visits — medications, instructions, terminology they may not fully understand. AI tools could help, but a critical question was unanswered: how much should the AI automate, and how much control should older adults retain?",
+      what_i_did: "Led end-to-end research across multiple studies: 20+ interviews, Wizard of Oz studies, participatory design workshops, and focus groups with older adults. Built and tested 'Scribe,' an AI prototype for capturing patient-physician conversations, with features at varying automation levels — from fully automated summaries to user-controlled text simplification and selective information sharing with caregivers.",
+      key_finding: "There's no single right level of AI automation — it depends on the task. Older adults were happy to let AI fully handle routine work like summarizing notes, but insisted on personal control for high-stakes decisions: understanding medical terms, choosing what health information to share, and with whom. This led to a three-part design framework — full delegation, direct control, and collaborative completion — that maps each feature to the level of autonomy users actually want.",
       methods: ["Interviews", "Wizard of Oz", "Participatory Design", "Focus Groups", "Usability Testing"],
-      impact: "Findings shaped a collaborative health management platform now in usability testing. Published at CHI and CSCW.",
+      impact: "Framework adopted into platform design. Findings published at CHI and CSCW, with implications for any AI tool serving populations where trust and control are non-negotiable.",
     },
     {
       title: "Predicting Student Dropout at Scale",
       context: "Western Governors University · Informed institutional strategy",
       domain: "EdTech",
       image: "/images/withdrawal-consideration.png",
-      problem: "WGU needed to know which students were most at risk of dropping out — and more importantly, what levers they could actually pull to intervene.",
-      what_i_did: "Designed and ran a 785+ participant mixed-methods study using structural equation modeling. Built a validated survey instrument from scratch. Identified Course Relevance to Career Goals as the single strongest predictor of dropout intention.",
-      key_finding: "Course Relevance to Career Goals had a standardized effect of β = –0.523 on dropout intention — nearly twice the effect of the next predictor. This gave leadership a clear, actionable priority: redesign the courses students find least relevant first.",
+      problem: "WGU serves 170,000+ students, many of them working adults. The university needed to understand not just who was at risk of dropping out, but which factors they could actually act on to keep students enrolled.",
+      what_i_did: "Designed and ran a 785+ participant mixed-methods study using structural equation modeling. Built a validated survey instrument from scratch, measuring nine factors — from course quality and instructor support to peer interaction and resource adequacy.",
+      key_finding: "Students who felt their coursework was irrelevant to their career goals were far more likely to consider dropping out than those struggling with any other factor. Course relevance had nearly twice the predictive effect of the next strongest factor (β = –0.620). This gave leadership a clear, evidence-based priority: focus redesign efforts on the courses students find least connected to their careers.",
       methods: ["SEM", "Survey Design", "Statistical Modeling", "Longitudinal Analysis"],
-      impact: "Directly prioritized which courses to redesign first. Presented findings to institutional leadership.",
+      impact: "Directly informed which courses to redesign first. Presented to institutional leadership and shaped retention strategy.",
     },
     {
       title: "Radiologist Interface Design for Automated Breast Ultrasound",
@@ -489,8 +489,8 @@ function ApproachPage({ onNavigate }) {
       <section className="content-section quote-section-inner">
         <blockquote className="research-quote">
           <div className="quote-mark" aria-hidden="true">&ldquo;</div>
-          <p className="quote-text">Older adults wanted AI that supported collaboration with caregivers, not autonomy from them. That single finding — from 20 interviews — reshaped an entire platform's architecture.</p>
-          <footer className="quote-attr">— From my CHI/CSCW research on AI-assisted health management</footer>
+          <p className="quote-text">Older adults were happy to let AI summarize their doctor's notes — but insisted on controlling which medical terms to look up and who to share their health data with. One automation level doesn't fit all tasks.</p>
+          <footer className="quote-attr">— From my CHI research on automation preferences in AI health tools</footer>
         </blockquote>
       </section>
 
